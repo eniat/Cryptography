@@ -12,7 +12,7 @@ The aim is to demonstrate the core idea of **encrypt-then-MAC**: encrypt the mes
 
 ```text
 .
-├── courseworkCode.py   # AES-CBC encryption, HMAC generation and test cases
+├── cryptography.py   # AES-CBC encryption, HMAC generation and test cases
 └── README.md           # Project documentation
 ```
 
@@ -70,7 +70,7 @@ The script also uses Python's built-in `os` module for random key and IV generat
 Clone or download the repository, then run:
 
 ```bash
-python courseworkCode.py
+python cryptography.py
 ```
 
 Expected output:
@@ -101,7 +101,7 @@ These tests are placed under repeated `if __name__ == "__main__":` blocks, so th
 
 ```python
 import os
-from courseworkCode import encrypt_then_mac, decrypt_and_verify
+from cryptography import encrypt_then_mac, decrypt_and_verify
 
 aes_key = os.urandom(32)
 mac_key = os.urandom(32)
@@ -144,3 +144,11 @@ Using separate keys for AES and HMAC is good practice because encryption and aut
 ## Notes
 
 This project focuses on demonstrating the mechanics of authenticated encryption. It shows why confidentiality alone is not enough: encrypted data also needs integrity protection so that modified ciphertext is detected before decryption occurs.
+
+## Usage Notice
+
+This repository is provided for portfolio and review purposes only.
+
+All rights are reserved. No permission is granted to copy, redistribute, submit, or reuse this work, in whole or in part, for academic coursework, assessment, or commercial purposes.
+
+Where this repository relates to university coursework, it is shared only to demonstrate my own technical work and should not be used by other students as a submission or solution.
