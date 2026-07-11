@@ -35,7 +35,7 @@ def encrypt_then_mac(plaintext, aes_key, mac_key):
 def decrypt_and_verify(iv, ciphertext, mac, aes_key, mac_key):
     # Decrypt the ciphertext and verify the MAC.
     expected_mac = generate_hmac(mac_key, iv + ciphertext)
-    if mac == expected_mac:
+    if hmac.compare_digest(mac, expected_mac):
         # Create the AES cipher in CBC mode
         cipher = Cipher(algorithms.AES(aes_key), modes.CBC(iv), backend=default_backend())
         # Create the decryptor object
