@@ -12,8 +12,10 @@ The aim is to demonstrate the core idea of **encrypt-then-MAC**: encrypt the mes
 
 ```text
 .
-├── cryptography.py   # AES-CBC encryption, HMAC generation and test cases
-└── README.md           # Project documentation
+├── encrypt_then_mac.py   # AES-CBC encryption, HMAC generation and test cases
+├── requirements.txt      # Python dependencies
+├── LICENSE.txt           # Usage terms
+└── README.md             # Project documentation
 ```
 
 ## What the Program Demonstrates
